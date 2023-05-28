@@ -1,0 +1,23 @@
+#{extends 'main.html'/}
+#{set title:'Listagem de cadastrados'/}
+
+<div class="container col-3 mt-4">
+    #{list items:listaPessoas, as:'i'}
+        <div class="card text-center">
+            <div class="card-header">
+                ID: ${i.id}
+            </div>
+            <div class="card-body">
+                <p class="card-text">Email: ${i.email}</p>
+                <p class="card-text">Nome: ${i.nome}</p>
+                
+            </div>
+            <div class="card-footer text-body-secondary">
+                <a href="@{Pessoas.editar(i.id)}" class="btn btn-outline-primary">Editar</a>
+                <a href="@{Pessoas.deletar(i.id)}" class="btn btn-outline-primary">Deletar</a>
+            </div>
+        </div>
+
+        <br/>
+    #{/list}
+</div>

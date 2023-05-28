@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set title:'Formulário de cadastro' /}
+
+<div class="container col-3 mt-5">
+
+    <form action="@{Pessoas.cadastrar}">
+        <input type="hidden" name="p.id" value="${p?.id}">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email: </label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" name="p.email" value="${p?.email}">
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome: </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="p.nome" value="${p?.nome}">
+        </div>
+    
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Senha: </label>
+            </div>
+            <div class="col-auto">
+                <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline" name="p.senha">
+            </div>
+            <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                </span>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary mt-4">
+    </form>
+</div>
