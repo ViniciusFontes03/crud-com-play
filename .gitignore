@@ -8,7 +8,7 @@ bin/
 /project/project
 /project/target
 /target
-tmp/
+tmp
 *.tmp
 test-result
 server.pid
